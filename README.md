@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TradeX — Premium Trading Platform
+
+A premium, modern next-generation trading platform website with a clean fintech aesthetic. Dark-first interface, animated candlestick charts, live market data, and polished motion design throughout.
+
+## Live Demo
+
+- **Production:** https://tradex-beryl-eight.vercel.app
+- **Repository:** https://github.com/gvishnu006/tradex
+
+## Features
+
+- **Hero** — high-impact section with live market ticker, animated trading chart preview, floating market statistics, and animated counters
+- **Trading Terminal Dashboard** — interactive animated candlestick chart with hover tooltips, crosshair, order book, recent trades, buy/sell controls, watchlist, and market sentiment
+- **Features** — six feature cards with animated icons and hover interactions
+- **AI Trading Section** — AI market assistant visualization with animated insight metrics and AI market summary
+- **Portfolio** — animated self-drawing performance chart, asset allocation donut, and holdings with count-up values
+- **Live Markets** — filterable table (All / Crypto / Stocks / Forex / Commodities) with sparklines and sorting
+- **Security** — trust and safety section with shield animations
+- **Pricing** — three tiers with a highlighted recommended plan
+- **Testimonials** — premium customer cards
+- **Final CTA + Footer** — dramatic minimal closing section with animated market lines and full footer with risk disclaimer
+- **Mobile-ready** — bottom navigation, responsive layout, touch-friendly controls
+
+## Tech Stack
+
+- **Next.js 16** (App Router)
+- **React 19**
+- **TypeScript**
+- **Tailwind CSS v4**
+- **Framer Motion** — animations
+- **Lucide Icons**
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build & Lint
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run lint
+```
 
-## Learn More
+Note: build uses `next build --webpack` for local Windows compatibility.
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├── app/
+│   ├── globals.css        # Design system, theme tokens, animations
+│   ├── layout.tsx         # Root layout & fonts
+│   └── page.tsx           # Page assembly
+├── components/            # UI sections & shared components
+└── lib/
+    └── utils.ts           # Data, helpers, market data
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deployed to Vercel via the Vercel CLI. Any push to `main` triggers a new production deployment.
